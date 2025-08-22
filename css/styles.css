@@ -11006,3 +11006,43 @@ section.resume-section .resume-section-content {
         min-width: 0;
     }
 }
+
+/* Publications 제목만 대문자로 */
+#publications h2 {
+  text-transform: uppercase;
+}
+
+/* 나머지 제목들은 원래대로 */
+#publications h3,
+#publications h4 {
+  text-transform: none;
+  font-family: Arial, sans-serif;
+}
+
+.publication-card {
+  border-left: 4px solid #007bff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.publication-card h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
+
+.publication-card p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-family: Arial, sans-serif;
+}
+
+.publication-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: underline;
+}
