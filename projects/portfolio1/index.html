@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Portfolio - 3D Action RPG</title>
+        <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../../css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../../index.html">
+                <span class="d-block d-lg-none">Home</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../../assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">게임 소개</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#details">개발 내용</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#features">핵심 시스템</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#retrospective">느낀 점</a></li>
+                </ul>
+            </div>
+        </nav>
+       <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-3">
+                        포트폴리오 게임 (3D 액션 RPG)
+                    </h2>
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/fYX28SCsdQY" title="Portfolio1 Video" allowfullscreen></iframe>
+                    </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="http://naver.me/xb7vd9to" class="btn btn-primary" target="_blank">게임 실행 파일 다운로드</a>
+                        <a href="https://github.com/Eul-Seok/Portfolio_Unreal" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub에서 코드 보기</a>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><strong>제작자 :</strong> 홍을석</li>
+                        <li><strong>게임명 :</strong> 신전 RPG</li>
+                        <li><strong>개발 언어 및 엔진 :</strong> C++, UnrealEngine4</li>
+                        <li><strong>개발 인원 (참여도) :</strong> 총 1명 (100%)</li>
+                        <li><strong>개발 기간 :</strong> 2023.04 ~ 2023.07 (4개월)</li>
+                        <li><strong>지원 플랫폼 :</strong> Windows (64-bit)</li>
+                    </ul>
+                    <p class="lead">
+                        본  게임은 Unreal Engine4를 이용해 C++ 기반으로 제작되었으며, 처음 제작하는 게임이라 게임성보단 다양한 기능을 구현하고, 다양한 상황을 경험하는 것에 초점을 두고 제작했습니다.<br/>
+                        도움말을 통해 플레이 방법을 숙지할 수 있으며, NPC가 부여하는 퀘스트를 진행해 보스 몬스터를 잡는 것이 게임 클리어 조건입니다.
+                    </p>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Details -->
+            <section class="resume-section" id="details">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">개발 내용</h2>
+                    <h3 class="mb-4">개발 일정표</h3>
+                    <img src="image/게임개발일정표.svg" class="img-fluid mb-5" alt="개발 일정표">
+
+                    <h3 class="mb-3">개발 내용 간략하게 살펴보기</h3>
+                    <img src="image/mindmap.png" class="img-fluid mb-3" alt="Mind Map">
+                    <p>위의 그림은 제가 개발한 내용들을 간략하게 마인드 맵으로 나타낸 것으로, 크게 5가지 영역(시스템, 환경, 캐릭터, 아이템, 위젯)으로 분류했습니다.</p>
+                    
+                    <div class="mb-5">
+                        <h4 class="mb-3">시스템</h4>
+                        <img src="image/system.png" class="img-fluid mb-3" alt="System Diagram">
+                        <p>게임의 기본적인 코드 구조는 코드 어디에서든 쉽게 호출할 수 있는 게임 스테이트(GameState)를 게임 매니저(`AGameMgr`)로 두고, 게임 스테이트에 인벤토리나 스킬 시스템 등을 관리하는 매니저들을 액터 컴포넌트(ActorComponent)로 부착하여 게임 스테이트를 통해 각종 매니저들에 접근할 수 있도록 설계했습니다.</p>
+                        <ul>
+                            <li><strong>인벤토리 매니저 (InventoryManager):</strong> 인벤토리로의 아이템 추가와 인벤토리 내 아이템 스왑(Swap) 등의 인벤토리와 관련된 전반적인 기능들을 담당합니다.</li>
+                            <li><strong>아이템 매니저 (ItemManager):</strong> 아이템과 관련된 기능들(사용, 버리기, 파괴하기)을 담당하며, 인벤토리 매니저의 기능을 분담하기 위해 제작했습니다.</li>
+                            <li><strong>효과 매니저 (AffectManager):</strong> 아이템이나 스킬로 인해 캐릭터의 상태를 변화시켜야 하는 경우, 그와 관련된 효과들을 관리하는 역할을 합니다.</li>
+                            <li><strong>스킬 매니저 (SkillManager):</strong> 플레이어가 가진 스킬들을 스킬창에 등록하거나, 스킬의 사용 가능 여부를 확인하는 등의 플레이어 스킬과 관련된 전반적인 기능들을 담당합니다.</li>
+                            <li><strong>위젯 매니저 (WidgetManager):</strong> C++로 기능을 제작한 위젯을 상속한 블루프린트 위젯을 C++에서 사용할 수 있도록 가져오고, 게임 플레이에 필요한 위젯들의 동작을 제어하는 역할을 합니다.</li>
+                            <li><strong>사운드 매니저 (SoundManager):</strong> 게임에서 사용되는 사운드들을 관리하며, 코드 작업 시 원하는 사운드를 쉽게 불러오기 위해 제작했습니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5">
+                        <h4 class="mb-3">환경</h4>
+                        <ul>
+                            <li><strong>레벨 제작 (Level Design):</strong> 하이트맵(Height Map)을 통해 지형의 기본적인 틀을 정하였고, 랜드 스케이프 머티리얼(Material)을 제작해 지형의 높낮이에 따라 다른 머티리얼 함수가 적용되도록 만들었습니다.</li>
+                            <li><strong>시네마틱 제작 (Cinematic):</strong> 게임의 최종 보스(Boss)가 등장할 시에 사용되었으며, 플레이어가 보스 소환 아이템을 지닌 채 특정 지역에 도달하게 되면 시네마틱이 재생된 후에 보스가 소환(Spawn)되도록 제작했습니다.</li>
+                        </ul>
+                    </div>
+
+                     <div class="mb-5">
+                        <h4 class="mb-3">캐릭터</h4>
+                        <p>캐릭터들에는 여러 가지의 콜리전(Collision)들을 배치해 각각 다른 충돌을 담당하도록 만들었습니다.</p>
+                        <ul>
+                            <li><strong>플레이어 (Player):</strong> 피격(Hit)이나 공격(Attack)과 관련된 작업과 무기 장착이나 몽타주(Montage) 실행 중 등의 캐릭터 동작 상태 확인 및 행동과 관련된 작업을 했습니다. 또한, UI와 관련된 내용들은 전부 플레이어 컨트롤러에서 관리하도록 분리했습니다.</li>
+                            <li><strong>NPC:</strong> 퀘스트(Quest) 액터를 월드상에서 부착하여 플레이어가 퀘스트를 부여받을 수 있도록 제작했으며, 텍스트 렌더(Text Render)를 이용해 NPC의 이름을 표시했습니다.</li>
+                            <li><strong>몬스터 (Monster):</strong> 몬스터의 기본 정보나 피격 시스템을 작업했으며, 몬스터가 사망할 때 사망 애니메이션이 없을 경우 래그돌(Ragdoll)이 적용되도록 제작했습니다.</li>
+                        </ul>
+                    </div>
+                     <div class="mb-5">
+                        <h4 class="mb-3">아이템</h4>
+                        <p>아이템에는 아이템 획득을 위한 충돌 체크 기능이 있고, 아이템이 지닐 효과는 블루프린트에서 직접 선택하여 집어넣을 수 있게 했습니다.</p>
+                        <ul>
+                            <li><strong>소모 아이템:</strong> 본 게임의 소모 아이템은 HP와 MP를 회복할 수 있는 포션입니다.</li>
+                            <li><strong>장비 아이템:</strong> 본 게임의 장비 아이템은 무기(Weapon) 종류만 제작했으며, 공격(Attack)과 관련된 충돌 체크와 데미지 계산 작업이 이루어집니다.</li>
+                            <li><strong>퀘스트 아이템:</strong> 본 게임에 존재하는 퀘스트 아이템은 보스를 소환하는 아이템뿐입니다.</li>
+                        </ul>
+                    </div>
+                     <div class="mb-5">
+                        <h4 class="mb-3">위젯</h4>
+                        <p>모든 위젯의 기능은 C++를 통해 구현했으며, 위젯의 디자인은 C++ 위젯을 상속받아 언리얼 엔진에서 작업했습니다.</p>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Features -->
+            <section class="resume-section" id="features">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">핵심 시스템 및 기능 영상</h2>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">인벤토리 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/uHLpKJGK0WU" title="Inventory System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/inventory_system_1.png" class="img-fluid mb-3" alt="Inventory System">
+                        <img src="image/inventory_system_2.png" class="img-fluid mb-3" alt="Inventory System">
+                        <img src="image/inventory_system_3.png" class="img-fluid mb-3" alt="Inventory System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">아이템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/cKR_3ZLrV2U" title="Item System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/item_1.png" class="img-fluid mb-3" alt="Item System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">스킬 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/BzLS4q-xtbg" title="Skill System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/skill_system_1.png" class="img-fluid mb-3" alt="Skill System">
+                        <img src="image/skill_system_2.png" class="img-fluid mb-3" alt="Skill System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">스킬</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/lEP8zWpjvbE" title="Player Skill" allowfullscreen></iframe>
+                        </div>
+                         <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/0HfOgcvFIIA" title="Monster Skill" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/skill_1.png" class="img-fluid mb-3" alt="Skill">
+                        <img src="image/skill_2.png" class="img-fluid mb-3" alt="Skill">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">빠른 사용 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/Kr_rqfmZIuE" title="Quick Slot System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/quickslot_1.png" class="img-fluid mb-3" alt="Quick Slot System">
+                        <img src="image/quickslot_2.png" class="img-fluid mb-3" alt="Quick Slot System">
+                    </div>
+                    
+                     <div class="mb-5">
+                        <h3 class="mb-3">AI 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/IyFS_55N2-U" title="AI System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/ai_system_1.png" class="img-fluid mb-3" alt="AI System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">퀘스트 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/uNDp6mLzz1Q" title="Quest System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/quest_system_1.png" class="img-fluid mb-3" alt="Quest System">
+                        <img src="image/quest_system_2.png" class="img-fluid mb-3" alt="Quest System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">UI 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/w0eoesJCkfw" title="UI System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/ui_system_1.png" class="img-fluid mb-3" alt="UI System">
+                        <img src="image/ui_system_2.png" class="img-fluid mb-3" alt="UI System">
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="mb-3">능력치 시스템</h3>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/VLHKs91R5sA" title="Stat System" allowfullscreen></iframe>
+                        </div>
+                        <img src="image/stat_system_1.png" class="img-fluid mb-3" alt="Stat System">
+                    </div>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Retrospective -->
+            <section class="resume-section" id="retrospective">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">개발을 하면서 느낀 점</h2>
+                    <p>
+                        포트폴리오를 끝까지 봐주셔서 감사드립니다.<br/>
+                        마지막으로, 게임 개발하면서 느꼈던 점과 앞으로의 목표에 대해 간략하게 말씀드리고자 합니다.
+                    </p>
+                    <p>
+                        처음 하게 된 게임 개발은 어려움으로 가득했습니다.<br/>
+                        게임 학원을 통해 C++ 언어와 언리얼 엔진의 블루프린트로 게임을 제작하는 방법에 대해서는 배웠지만, 실제로 블루프린트가 아닌 C++를 이용해 게임을 제작하는 것은 별개의 문제처럼 느껴졌고, 막막함을 느꼈습니다.<br/>
+                        하지만, 차근차근 기능들을 하나, 둘씩 C++를 통해 구현해 나가면서 점점 C++로 게임을 개발하는 것에 익숙해지는 느낌을 받을 수 있었습니다.<br/>
+                        분명, 아직 클래스를 설계하고, 설계한 기능들이 버그 없이 한 번에 돌아가도록 만들기에는 미숙한 부분이 있습니다.<br/>
+                        그럼에도 불구하고, 버그를 발견하거나, 막히는 부분이 발생했을 때, 처음에는 헤매거나 갈피를 못 잡을지라도 고민 끝에 이를 해결했을 때 한 층 성장한 저 자신을 발견할 수 있었습니다.
+                    </p>
+                    <p>
+                        게임을 개발하면서 느꼈던 가장 큰 어려움은 동료의 부재였습니다.<br/>
+                        처음 만드는 게임인 만큼 모든 게임 개발 과정을 겪어봐야 다른 직무 사람들의 고충을 이해할 수 있겠다고 생각했습니다.<br/>
+                        역시, 기획 단계를 시작으로 자료 조사, 레벨 제작, 콘텐츠 제작, 애니메이션 제작, 게임 테스트에 이르기까지 쉬운 일은 없었고, 그 과정을 통해 동료의 필요성을 느낄 수밖에 없었습니다.
+                    </p>
+                    <p>
+                        저는 게임 개발을 진행하면서 협업의 중요성에 대해 다시 한번 깨달을 수 있었습니다.<br/>
+                        회사에 입사하게 되면 다양한 직무의 사람들과 협업하게 될 것이고, 그들과 원활한 소통을 나누어야 좋은 게임이 탄생할 것입니다.<br/>
+                        그래서, 저는 개발자로서의 성장뿐만 아니라, 다른 직무 사람들의 고충을 이해하고, 그들과 소통해 나가면서 팀에서 중심축을 담당할 수 있는 회사에서 꼭 필요로 하는 인재가 되는 것이 목표입니다.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../../js/scripts.js"></script>
+    </body>
+</html>
