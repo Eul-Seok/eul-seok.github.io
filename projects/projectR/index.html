@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>게임 개발자 '홍을석'</title>
+        <title>프로젝트R</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -27,6 +27,12 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contributions">Contributions</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#combat system">Combat System</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interactive ui">Interactive UI</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#optimization">Optimization</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#problem-solving">Problem-Solving</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#growth">Growth</a></li>
                 </ul>
             </div>
         </nav>
@@ -41,15 +47,169 @@
                     <div class="subheading mb-2">
                         BluePotion Games
                     </div>
-                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/slBGNvYOWIA" title="Project R Video" allowfullscreen></iframe>
+                     <div class="row align-items-center">
+                        <div class="col-lg-7 mb-lg-0 mb-4 pe-lg-4">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/slBGNvYOWIA" title="Project R Video" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 ps-lg-4">
+                            <div>
+                                <p class="mb-2"><strong>Released:</strong> 미정</p>
+                                <p class="mb-2"><strong>Developer:</strong> BluePotion Games</p>
+                                <p class="mb-2"><strong>Platforms:</strong> PC, Android</p>
+                                <p class="mb-2"><strong>Skill focus:</strong> 전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처, 최적화</p>
+                                <p class="mb-2"><strong>Time spent on project:</strong> 2023.09 ~ Present</p>
+                                <p class="mb-0"><strong>Language & Engine:</strong> C++, Unreal Engine 5</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="lead mt-4">
-                        프로젝트R에 대한 설명을 작성합니다.
+                    <p class="mt-4">
+                    본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크(Lineage-like) 스타일 대규모 MMORPG</strong>로,  
+                    C++과 Unreal Engine 5를 활용해 높은 그래픽 품질과 최적의 성능을 구현했습니다.<br>
+                    <strong>World Partition System, AI Pathfinding / Navigation System, Gameplay Ability System(GAS), 나나이트(Nanite)</strong> 등 다양한 기술이 적용되었으며,  
+                    UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입해 코드의 재사용성과 유지보수성을 높였습니다.
                     </p>
+                    <p>
+                    저는 <strong>전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처 설계 및 최적화</strong> 등 여러 영역에 참여하여 게임의 완성도 향상에 기여했습니다.<br>
+                    현재 출시 미정인 비공개 프로젝트로, 주요 내용은 텍스트 중심으로 구성하였습니다.
+                    </p>
+
                 </div>
             </section>
             <hr class="m-0" />
+            
+            <!-- Contributions -->
+            <section class="resume-section" id="contributions">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Summary Of Contributions</h2>
+                    <div class="accordion" id="experienceAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    전투 시스템 설계 및 개선
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>State Machine 패턴 적용으로 <strong>전투 프로세스 구조 재편 및 안정성 강화</strong></li>
+                                        <li><strong>자동 전투 시스템</strong> 직접 개발로 편의성 및 몰입도 향상</li>
+                                        <li>콤보 스킬, 퀵슬롯, 스캔 시스템 구현으로 전투 핵심 기능 고도화</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    다양한 콘텐츠 시스템 구현
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>월드맵·필드맵·미니맵 UI 개발로 시각 퀄리티 및 UX 개선</li>
+                                        <li>레이드 던전 콘텐츠 구조 모듈화로 <strong>재사용성 극대화</strong></li>
+                                        <li>결투·업적·시즌패스·우편·소환 상점 등 <strong>방대한 콘텐츠 개발</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    개발 효율성 및 아키텍처 개선
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>MVVM 구조·공통 UI 컴포넌트 도입으로 코드 재사용 및 <strong>생산성 향상</strong></li>
+                                        <li>AI 스크립트 자동 생성 도구로 서버 패킷·데이터 <strong>작업 시간 50% 단축</strong></li>
+                                        <li>콘텐츠 스케줄 관리 시스템 구축으로 운영 <strong>안정성 확보</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    게임 안정성 및 최적화 기여
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                                <div class="accordion-body">
+                                    <ul>
+                                            <li>메모리 누수·댕글링 포인터 버그 수정으로 <strong>안정성·성능 대폭 개선</strong></li>
+                                        <li>장시간 플레이 시 프레임 드랍·크래시 원인 분석 및 해결</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    성능 최적화 및 문제 해결 경험
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>미니맵 <strong>이벤트 기반 업데이트 전환</strong>으로 <strong>불필요 연산 제거</strong></li>
+                                        <li>메모리 해제 누락 원인 분석 및 수정으로 <strong>프레임·크래시 문제 해결</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Combat System -->
+            <section class="resume-section" id="combat system">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Combat System</h2>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Interactive UI -->
+            <section class="resume-section" id="interactive ui">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interactive UI</h2>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Optimization -->
+            <section class="resume-section" id="optimization">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Optimization</h2>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            <!-- Problem-Solving -->
+            <section class="resume-section" id="problem-solving">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Problem-Solving</h2>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Growth -->
+            <section class="resume-section" id="growth">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Growth</h2>
+                    
+                </div>
+            </section>
         </div>
 
         <!-- Bootstrap core JS-->
