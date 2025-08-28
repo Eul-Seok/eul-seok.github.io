@@ -27,11 +27,11 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">소개</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contributions">주요 기여 요약</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#combat-system">전투 시스템</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interactive-ui">상호작용 UI</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#optimization">최적화</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#problem-solving">문제해결</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contributions">나의 주요 기여</a></li>
+                    <li class="nav-item nested"><a class="nav-link js-scroll-trigger" href="#combat-system">전투 시스템 설계 및 개선</a></li>
+                    <li class="nav-item nested"><a class="nav-link js-scroll-trigger" href="#architecture">개발 효율성 및 아키텍처 개선</a></li>
+                    <li class="nav-item nested"><a class="nav-link js-scroll-trigger" href="#optimization">게임 안정성 및 최적화 기여</a></li>
+                    <li class="nav-item nested"><a class="nav-link js-scroll-trigger" href="#problem-solving">문제해결</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#growth">성장</a></li>
                 </ul>
             </div>
@@ -65,16 +65,11 @@
                         </div>
                     </div>
                     <p class="mt-4">
-                    본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크(Lineage-like) 스타일 대규모 MMORPG</strong>로,  
-                    C++과 Unreal Engine 5를 활용해 높은 그래픽 품질과 최적의 성능을 구현했습니다.<br>
-                    <strong>World Partition System, AI Pathfinding / Navigation System, Gameplay Ability System(GAS), Nanite</strong> 등 다양한 기술이 적용되었고,  
-                    UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입해 코드의 재사용성과 유지보수성을 높였습니다.
+                        본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크(Lineage-like) 스타일 대규모 MMORPG</strong>로,  
+                        C++과 Unreal Engine 5를 활용해 높은 그래픽 품질과 최적의 성능을 구현했습니다.<br>
+                        <strong>World Partition System, AI Pathfinding / Navigation System, Gameplay Ability System(GAS), Nanite</strong> 등 다양한 기술이 적용되었고,  
+                        UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입해 코드의 재사용성과 유지보수성을 높였습니다.
                     </p>
-                    <p>
-                    저는 <strong>전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처 설계 및 최적화</strong> 등 여러 영역에 참여하여 게임의 완성도 향상에 기여했으며,
-                    현재 출시 미정인 비공개 프로젝트라 주요 내용은 텍스트 중심으로 구성했습니다.
-                    </p>
-
                 </div>
             </section>
             <hr class="m-0" />
@@ -82,7 +77,11 @@
             <!-- Contributions -->
             <section class="resume-section" id="contributions">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">주요 기여 요약</h2>
+                    <h2 class="mb-5">나의 주요 기여</h2>
+                    <p class="lead mb-5">
+                        저는 <strong>전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처 설계 및 최적화</strong> 등 여러 영역에 참여하여 게임의 완성도 향상에 기여했으며,
+                        현재 출시 미정인 비공개 프로젝트라 주요 내용은 텍스트 중심으로 구성했습니다.
+                    </p>
                     <div class="accordion" id="experienceAccordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -103,26 +102,10 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                    다양한 콘텐츠 시스템 구현
-                                </button>
-                            </h4>
-                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li>월드맵·필드맵·미니맵 UI 개발로 시각 퀄리티 및 UX 개선</li>
-                                        <li>레이드 던전 콘텐츠 구조 모듈화로 <strong>재사용성 극대화</strong></li>
-                                        <li>결투·업적·시즌패스·우편·소환 상점 등 <strong>방대한 콘텐츠 개발</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                     개발 효율성 및 아키텍처 개선
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
                                 <div class="accordion-body">
                                     <ul>
                                         <li>MVVM 구조·공통 UI 컴포넌트 도입으로 코드 재사용 및 <strong>생산성 향상</strong></li>
@@ -133,31 +116,32 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                     게임 안정성 및 최적화 기여
                                 </button>
-                            </h4>
-                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
                                 <div class="accordion-body">
                                     <ul>
-                                            <li>메모리 누수·댕글링 포인터 버그 수정으로 <strong>안정성·성능 대폭 개선</strong></li>
-                                        <li>장시간 플레이 시 프레임 드랍·크래시 원인 분석 및 해결</li>
+                                        <li>메모리 누수·댕글링 포인터 버그 수정으로 <strong>안정성·성능 대폭 개선</strong></li>
+                                        <li>미니맵 <strong>이벤트 기반 업데이트 전환</strong>으로 <strong>불필요 연산 제거</strong></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                    성능 최적화 및 문제 해결 경험
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    다양한 콘텐츠 시스템 구현
                                 </button>
-                            </h4>
-                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
                                 <div class="accordion-body">
                                     <ul>
-                                        <li>미니맵 <strong>이벤트 기반 업데이트 전환</strong>으로 <strong>불필요 연산 제거</strong></li>
-                                        <li>메모리 해제 누락 원인 분석 및 수정으로 <strong>프레임·크래시 문제 해결</strong></li>
+                                        <li>월드맵·필드맵·미니맵 UI 개발로 시각 퀄리티 및 UX 개선</li>
+                                        <li>레이드 던전 콘텐츠 구조 모듈화로 <strong>재사용성 극대화</strong></li>
+                                        <li>결투·업적·시즌패스·우편·소환 상점 등 <strong>방대한 콘텐츠 개발</strong></li>
                                     </ul>
                                 </div>
                             </div>
@@ -170,18 +154,21 @@
             <!-- Combat System -->
             <section class="resume-section" id="combat-system">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">전투 시스템</h2>
-
+                    <h2 class="mb-5">전투 시스템 설계 및 개선</h2>
                     <p class="lead mb-4">
                         프로젝트 R의 전투 시스템은 <strong>상태 머신(State Machine)</strong>을 기반으로 설계되어, 복잡한 전투 상황에서도 명확하고 안정적으로 동작합니다. 
                         플레이어의 조작, 자동 전투, 스킬 사용 등 다양한 요소를 유기적으로 결합해 역동적인 전투를 가능하도록 했습니다.
-                    </p>
 
+                        <!-- 공격, 스킬 사용, 피격 처리 등 핵심 전투 로직 설명. -->
+                    </p>
                     <hr class="my-5">
 
-                    <h3 class="mb-4">주요 특징 (Key Features)</h3>
+                    <h3 class="mb-4">전투 프로세스 구조 개선</h3>
+                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 여러 조건 분기(if/else)가 중첩된 복잡한 구조로 인해 새로운 기능을 추가하거나 수정할 때 전투 로직이 꼬이는 문제가 자주 발생했습니다.</p>
+                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 상태 머신(State Machine) 패턴을 도입하여 전투 프로세스를 명확한 상태(대기, 공격, 피격 등)로 나누고, 각 상태의 전환 조건을 명확히 정의하여 재편했습니다. 이를 통해 각 상태는 자신의 로직에만 집중할 수 있게 되어 코드의 복잡도가 크게 낮아졌습니다.</p>
+                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 버그가 감소하고 코드의 가독성과 유지보수성이 향상되었습니다.</p>
 
-                    <div class="mb-5">
+                    <div class="mt-5 mb-3">
                         <h4>1. 상태 머신 기반의 공격 처리</h4>
                         <p>
                             전투 과정을  <strong>'추적', '회전', '공격 대기', '공격 중'</strong> 등 명확한 상태로 분리하고, 상태 전환 조건을 정의해 로직 복잡도를 낮췄습니다.
@@ -232,95 +219,7 @@ void UAttackProcessor::ProcessAttack()
                     </div>
 
                     <div class="mb-5">
-                        <h4>2. 자동 전투 시스템</h4>
-                        <p>
-                            <code>UAutoCombatProcessor</code>는 자동 전투를 전담하는 컴포넌트입니다. 단순히 가장 가까운 적을 공격하는 것을 넘어, <strong>매너 모드, 자동 반격</strong> 등 다양한 옵션을 제공하여 플레이어의 전략적 선택을 지원합니다. 
-                            또한, 퀘스트 추적 모드와 연동되어 자동으로 퀘스트 목표를 찾아 이동하고 전투를 수행합니다. 
-                            <code>TickComponent</code>를 통해 지속적으로 유효한 공격 대상을 탐색하고, 플레이어의 이동 상태를 확인하여 자동으로 공격을 시작하거나 중지합니다.
-                        </p>
-                        <pre><code class="language-cpp">
-// 자동 전투의 핵심 로직
-void UAutoCombatProcessor::TickComponent(...)
-{
-    // ...
-    // 현재 타겟이 유효한지 검사
-    if (!PlayerController->GetAttackProcessor()->ValidateSelectedAttackTarget())
-    {
-        // 유효하지 않다면 새로운 공격 대상 탐색
-        if (!PlayerController->GetActionTargetManagement()->RefreshValidAttackTargets())
-        {
-            // 공격 대상이 없으면 공격 중지
-            PlayerController->GetAttackProcessor()->StopAttack();
-            return;
-        }
-    }
-
-    // 이동 중이 아니고, 공격 중이 아니라면 새로운 공격 시작
-    if (!bFalling && PlayerController && !PlayerController->IsMoving())
-    {
-        if (!PlayerController->GetAttackProcessor()->IsAttacking())
-        {
-            PlayerController->GetAttackProcessor()->StartAttack();
-        }
-    }
-}
-                        </code></pre>
-                    </div>
-
-                    <div class="mb-5">
-                        <h4>3. 커스터마이징 가능한 자동 스킬 시스템 (Customizable Auto-Skill System)</h4>
-                        <p>
-                            <code>UAutoSkillComponent</code>를 통해 플레이어는 자동 전투 시 사용할 스킬의 순서와 조건을 설정할 수 있습니다. 
-                            단순 반복은 물론, 특정 조건에서만 발동하는 콤보 스킬 설정도 가능합니다. 시스템은 스킬 사용 가능 여부(쿨타임, 비용 등)를 실시간으로 체크하여 최적의 스킬을 선택합니다. 
-                            특히, 플레이어의 MP 변화나 스킬 쿨타임 완료 이벤트에 반응하여 사용 가능한 스킬을 동적으로 재평가하고, 필요에 따라 자동 스킬 사용을 재시도합니다.
-                        </p>
-                        <pre><code class="language-cpp">
-// 사용 가능한 스킬을 탐색하는 로직
-int32 UAutoSkillComponent::GetAvailableSkillNo()
-{
-    // ...
-    // 설정된 스킬 슬롯 순회
-    for (uint8 i = 0; i < CycleLength; i++)
-    {
-        // ...
-        const int32 SkillNo = GetAutoSkillNo(CalcAutoSkillSlotIndex);
-        
-        // 스킬 사용 조건(습득 여부, 쿨타임, 비용 등) 확인
-        if (CheckSkillConditions(SkillNo))
-        {
-            return SkillNo; // 사용 가능한 스킬 번호 반환
-        }
-    }
-    return DefaultSkillNo; // 사용 가능한 스킬이 없으면 기본 공격
-}
-
-// 스킬 사용 조건을 확인하는 함수
-bool UAutoSkillComponent::CheckSkillConditions(uint16 SkillNo) const
-{
-    // 스킬 습득 여부, 쿨타임, 비용 등을 확인
-    // ...
-    return IsLearnedSkill && IsSatisfyCoolTime && IsSatisfyCost;
-}
-
-// 스킬 사용 후 처리 (성공/실패)
-void UAutoSkillComponent::OnNotifySkillUsed(int32 SkillNo, uint16 Error)
-{
-    // ...
-    if (0 != Error)
-    {
-        ProcessAutoSkillUseError(SkillNo, Error); // 에러 처리
-    }
-    else
-    {
-        OnSkillUsed(SkillNo); // 스킬 사용 성공 처리
-    }
-    // ...
-}
-                        </code></pre>
-                    </div>
-
-                    <div class="mb-5">
-                        <h4>4. 스킬 실행 흐름 (Skill Execution Flow)</h4>
+                        <h4>2. 스킬 실행 흐름</h4>
                         <p>
                             플레이어의 스킬 사용은 <code>APlayerControllerBase</code>의 <code>PerformAttack</code> 함수를 통해 처리됩니다. 이 함수는 스킬 사용의 유효성을 검사하고, 대상(타겟)을 결정하며, 최종적으로 서버에 스킬 사용 요청을 전송합니다. 이 과정에서 클라이언트와 서버 간의 긴밀한 통신을 통해 스킬의 정확성과 안정성을 보장합니다. 
                             <code>GetInputUseSkillNo()</code>와 <code>ResetInputSlot()</code> 함수를 통해 현재 입력된 스킬 번호를 관리하고 초기화하며, 
@@ -383,85 +282,120 @@ void APlayerControllerBase::PerformAttack()
 }
                         </code></pre>
                     </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Interactive UI -->
-            <section class="resume-section" id="interactive-ui">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">상호작용 UI</h2>
-
-                    <p class="lead mb-4">
-                        프로젝트 R의 UI는 <strong>MVVM (Model-View-ViewModel) 아키텍처</strong>를 기반으로 설계되어, 데이터와 UI 표현을 명확하게 분리하고 유지보수성을 극대화했습니다. 
-                    </p>
 
                     <hr class="my-5">
+                    <h3 class="mb-4">자동 전투 시스템 개발</h3>
+                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 반복적인 수동 조작으로 인한 사용자의 피로도가 높았습니다.</p>
+                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 사용자의 개입을 최소화하는 자동 전투 로직을 직접 설계하고 구현했습니다.</p>
+                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 사용자 편의성과 게임 몰입도가 크게 향상되었습니다.</p>
 
-                    <h3 class="mb-4">주요 특징 (Key Features)</h3>
-
-                    <div class="mb-5">
-                        <h4>1. 순환형 퀵슬롯 (Looping Quick Slot)</h4>
+                    <div class="mt-5 mb-3">
+                        <h4>1. 자동 전투 시스템</h4>
                         <p>
-                            한정된 화면 공간에 많은 스킬을 배치하기 위해, 좌우로 무한히 순환하는 퀵슬롯을 구현했습니다. 
-                            이는 일반적인 리스트뷰 위젯을 커스터마이징한 <code>ULoopListView</code>를 통해 구현되었습니다. 리스트의 시작과 끝에 아이템을 복제하여 추가하고, 스크롤 위치에 따라 선택된 아이템을 동기화하여 끊김 없는 순환 효과를 만들어냈습니다. 
-                            특히, <code>OnListViewScrolledInternal()</code> 함수는 스크롤 위치를 감지하여 리스트의 시작과 끝에 아이템을 동적으로 추가/제거함으로써 무한 스크롤을 구현합니다. 
-                            또한, <code>GetDuplicatedItems()</code>와 <code>GetSourceItem()</code> 함수를 통해 원본 아이템과 복제된 아이템 간의 매핑을 관리하여 선택 상태를 일관성 있게 유지합니다.
+                            <code>UAutoCombatProcessor</code>는 자동 전투를 전담하는 컴포넌트입니다. 단순히 가장 가까운 적을 공격하는 것을 넘어, <strong>매너 모드, 자동 반격</strong> 등 다양한 옵션을 제공하여 플레이어의 전략적 선택을 지원합니다. 
+                            또한, 퀘스트 추적 모드와 연동되어 자동으로 퀘스트 목표를 찾아 이동하고 전투를 수행합니다. 
+                            <code>TickComponent</code>를 통해 지속적으로 유효한 공격 대상을 탐색하고, 플레이어의 이동 상태를 확인하여 자동으로 공격을 시작하거나 중지합니다.
                         </p>
                         <pre><code class="language-cpp">
-// ULoopListView.h
-UCLASS()
-class PROJECTU_API ULoopListView : public UListView
+// 자동 전투의 핵심 로직
+void UAutoCombatProcessor::TickComponent(...)
 {
-    GENERATED_BODY()
-
-public:
-    // 루프형 리스트뷰로 아이템을 추가하고자 할 때, 사용합니다.
-    template <typename ItemObjectT, typename AllocatorType = FDefaultAllocator>
-    void SetLoopListItems(const TArray<ItemObjectT, AllocatorType>& InListItems);
-
-protected:
-    virtual void OnListViewScrolledInternal(float ItemOffset, float DistanceRemaining) override;
-};
-
-// ULoopListView.cpp
-void ULoopListView::OnListViewScrolledInternal(float ItemOffset, float DistanceRemaining)
-{
-    Super::OnListViewScrolledInternal(ItemOffset, DistanceRemaining);
-
-    if (IsEnableLoop)
+    // ...
+    // 현재 타겟이 유효한지 검사
+    if (!PlayerController->GetAttackProcessor()->ValidateSelectedAttackTarget())
     {
-        // ...
-        // 스크롤이 특정 지점을 넘어가면, 자연스러운 루프 동작을 위해 스크롤 오프셋을 이동시킵니다.
-        const int32 TotalListLength = ListItems.Num();
-        if (FMath::IsNearlyEqual(ItemOffset, 0.0f, 0.0001f))
+        // 유효하지 않다면 새로운 공격 대상 탐색
+        if (!PlayerController->GetActionTargetManagement()->RefreshValidAttackTargets())
         {
-            const float NewScrollOffset = (float)TotalListLength - (float)(NumDisplayedItems * 2);
-            SetScrollOffset(NewScrollOffset);
-        }
-        else if (ItemOffset >= ((float)TotalListLength - (float)NumDisplayedItems))
-        {
-            SetScrollOffset((float)NumDisplayedItems);
+            // 공격 대상이 없으면 공격 중지
+            PlayerController->GetAttackProcessor()->StopAttack();
+            return;
         }
     }
-}
 
-// 중복 아이템을 가져오는 함수
-void ULoopListView::GetDuplicatedItems(const UObject* SourceItem, TArray<UObject*>& OutDuplicatedItems) const
-{
-    // ...
-}
-
-// 원본 아이템을 가져오는 함수
-const UObject* ULoopListView::GetSourceItem(const UObject* DuplicatedItem) const
-{
-    // ...
+    // 이동 중이 아니고, 공격 중이 아니라면 새로운 공격 시작
+    if (!bFalling && PlayerController && !PlayerController->IsMoving())
+    {
+        if (!PlayerController->GetAttackProcessor()->IsAttacking())
+        {
+            PlayerController->GetAttackProcessor()->StartAttack();
+        }
+    }
 }
                         </code></pre>
                     </div>
 
                     <div class="mb-5">
-                        <h4>2. MVVM 아키텍처 기반의 데이터 바인딩 UI</h4>
+                        <h4>2. 커스터마이징 가능한 자동 스킬 시스템</h4>
+                        <p>
+                            <code>UAutoSkillComponent</code>를 통해 플레이어는 자동 전투 시 사용할 스킬의 순서와 조건을 설정할 수 있습니다. 
+                            단순 반복은 물론, 특정 조건에서만 발동하는 콤보 스킬 설정도 가능합니다. 시스템은 스킬 사용 가능 여부(쿨타임, 비용 등)를 실시간으로 체크하여 최적의 스킬을 선택합니다. 
+                            특히, 플레이어의 MP 변화나 스킬 쿨타임 완료 이벤트에 반응하여 사용 가능한 스킬을 동적으로 재평가하고, 필요에 따라 자동 스킬 사용을 재시도합니다.
+                        </p>
+                        <pre><code class="language-cpp">
+// 사용 가능한 스킬을 탐색하는 로직
+int32 UAutoSkillComponent::GetAvailableSkillNo()
+{
+    // ...
+    // 설정된 스킬 슬롯 순회
+    for (uint8 i = 0; i < CycleLength; i++)
+    {
+        // ...
+        const int32 SkillNo = GetAutoSkillNo(CalcAutoSkillSlotIndex);
+        
+        // 스킬 사용 조건(습득 여부, 쿨타임, 비용 등) 확인
+        if (CheckSkillConditions(SkillNo))
+        {
+            return SkillNo; // 사용 가능한 스킬 번호 반환
+        }
+    }
+    return DefaultSkillNo; // 사용 가능한 스킬이 없으면 기본 공격
+}
+
+// 스킬 사용 조건을 확인하는 함수
+bool UAutoSkillComponent::CheckSkillConditions(uint16 SkillNo) const
+{
+    // 스킬 습득 여부, 쿨타임, 비용 등을 확인
+    // ...
+    return IsLearnedSkill && IsSatisfyCoolTime && IsSatisfyCost;
+}
+
+// 스킬 사용 후 처리 (성공/실패)
+void UAutoSkillComponent::OnNotifySkillUsed(int32 SkillNo, uint16 Error)
+{
+    // ...
+    if (0 != Error)
+    {
+        ProcessAutoSkillUseError(SkillNo, Error); // 에러 처리
+    }
+    else
+    {
+        OnSkillUsed(SkillNo); // 스킬 사용 성공 처리
+    }
+    // ...
+}
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Interactive UI -->
+            <section class="resume-section" id="architecture">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">개발 효율성 및 아키텍처 개선</h2>
+                    <p class="lead mb-4">
+                        프로젝트 R의 UI는 <strong>MVVM (Model-View-ViewModel) 아키텍처</strong>를 기반으로 설계되어, 데이터와 UI 표현을 명확하게 분리하고 유지보수성을 극대화했습니다. 
+                    </p>
+                    <hr class="my-5">
+
+                    <h3 class="mb-4">MVVM 아키텍처 개선</h3>
+                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 여러 조건 분기(if/else)가 중첩된 복잡한 구조로 인해 새로운 기능을 추가하거나 수정할 때 전투 로직이 꼬이는 문제가 자주 발생했습니다.</p>
+                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 상태 머신(State Machine) 패턴을 도입하여 전투 프로세스를 명확한 상태(대기, 공격, 피격 등)로 나누고, 각 상태의 진입/진출 조건을 명확히 정의하여 재편했습니다. 이를 통해 각 상태는 자신의 로직에만 집중할 수 있게 되어 코드의 복잡도가 크게 낮아졌습니다.</p>
+                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 버그가 감소하고 코드의 가독성과 유지보수성이 향상되었습니다.</p>
+
+                    <div class="mt-5 mb-5">
+                        <h4>1. MVVM 아키텍처 기반의 데이터 바인딩 UI</h4>
                         <p>
                             UI의 모든 요소(플레이어 HP, 스킬 쿨타임, 재화 등)는 ViewModel의 데이터와 바인딩되어, 데이터 변경 시 UI가 자동으로 업데이트됩니다. 
                             이를 통해 UI 갱신 코드를 직접 작성하는 대신, 데이터 관리 로직에만 집중할 수 있어 <strong>개발 생산성과 코드 안정성</strong>이 크게 향상되었습니다. 
@@ -492,18 +426,6 @@ void UFieldMapViewModel::PlacementSectorIcon(const FName& FieldMapID, const FFie
     // ...
 }
 
-// NPC 아이콘 배치
-void UFieldMapViewModel::PlacementNPCIcon(const FName& FieldMapID, const FName& SectorID, const FName& FieldPointID)
-{
-    // ...
-}
-
-// 위치 기억 아이콘 배치
-void UFieldMapViewModel::PlacementLocationMemoryIcon(const int64 CharacterIndex, const FName& FieldMapID)
-{
-    // ...
-}
-
 // 섹터 정보 업데이트
 void UFieldMapViewModel::UpdateSectorInfo(const FName& MapID, const FName& SectorID)
 {
@@ -518,9 +440,9 @@ void UFieldMapViewModel::UpdateSectorInfo(const FName& MapID, const FName& Secto
 }
                         </code></pre>
                     </div>
-
+                    
                     <div class="mb-5">
-                        <h4>3. 맵 상호작용 시스템 (Map Interaction System)</h4>
+                        <h4>2. 맵 상호작용 시스템 (Map Interaction System)</h4>
                         <p>
                             <code>UMapInteractionViewModel</code>은 맵의 확대/축소(Zoom) 및 이동(Pan)과 같은 상호작용을 관리하는 핵심 컴포넌트입니다. 
                             이 뷰모델은 <code>FMapZoomSettings</code>와 <code>FMapMovementSettings</code> 구조체를 통해 줌 레벨, 이동 속도, 경계 클램핑 등 다양한 설정을 유연하게 적용할 수 있도록 설계되었습니다. 
@@ -529,13 +451,6 @@ void UFieldMapViewModel::UpdateSectorInfo(const FName& MapID, const FName& Secto
                         </p>
                         <pre><code class="language-cpp">
 // MapInteractionViewModel.cpp
-void UMapInteractionViewModel::Init(const FMapZoomSettings& InMapZoomSettings, const FMapMovementSettings& InMapMovementSettings, FVector2D CanvasSize, FVector2D ViewportSize)
-{
-    ZoomSettings = InMapZoomSettings;
-    MapMovementSettings = InMapMovementSettings;
-    // ... 초기화 로직 ...
-}
-
 void UMapInteractionViewModel::UpdateZoomInterpolated(float DeltaTime, bool bFocusTranslation)
 {
     // ... 줌 보간 로직 ...
@@ -558,8 +473,27 @@ void UMapInteractionViewModel::UpdateZoomFocusTranslation()
                         </code></pre>
                     </div>
 
+                    <hr class="my-5">
+                    <h3 class="mb-4">MVVM 아키텍처 개발</h3>
+                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 여러 조건 분기(if/else)가 중첩된 복잡한 구조로 인해 새로운 기능을 추가하거나 수정할 때 전투 로직이 꼬이는 문제가 자주 발생했습니다.</p>
+                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 상태 머신(State Machine) 패턴을 도입하여 전투 프로세스를 명확한 상태(대기, 공격, 피격 등)로 나누고, 각 상태의 진입/진출 조건을 명확히 정의하여 재편했습니다. 이를 통해 각 상태는 자신의 로직에만 집중할 수 있게 되어 코드의 복잡도가 크게 낮아졌습니다.</p>
+                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 버그가 감소하고 코드의 가독성과 유지보수성이 향상되었습니다.</p>
+
+                    <div class="mt-5 mb-5">
+                        <h4>1. 순환형 퀵슬롯 (Looping Quick Slot)</h4>
+                        <figure class="figure mt-4" style="max-width: 60%;">
+                            <img src="image/LoopListView.svg" class="figure-img img-fluid rounded" alt="순환형 퀵슬롯 다이어그램">
+                            <figcaption class="figure-caption text-center">순환형 퀵슬롯(LoopListView) 동작 다이어그램</figcaption>
+                        </figure>
+                        <p>
+                            한정된 화면 공간에 많은 스킬을 배치하기 위해, 좌우로 무한히 순환하는 퀵슬롯을 구현했습니다. 
+                            이는 일반적인 리스트뷰 위젯을 커스터마이징한 <code>ULoopListView</code>를 통해 구현되었습니다. 리스트의 시작과 끝에 아이템을 복제하여 추가하고, 스크롤 위치에 따라 선택된 아이템을 동기화하여 끊김 없는 순환 효과를 만들어냈습니다. 
+                            특히, <code>OnListViewScrolledInternal()</code> 함수는 스크롤 위치를 감지하여 리스트의 시작과 끝에 아이템을 동적으로 추가/제거함으로써 무한 스크롤을 구현합니다. 
+                        </p>
+                    </div>
+
                     <div class="mb-5">
-                        <h4>4. 이벤트 기반의 최적화된 맵 시스템 (Event-Driven Map System)</h4>
+                        <h4>2. 이벤트 기반의 최적화된 맵 시스템 (Event-Driven Map System)</h4>
                         <p>
                             플레이어의 원활한 게임 플레이를 돕기 위해 세 가지 종류의 맵(월드맵, 필드맵, 미니맵)을 개발했습니다. 
                             각 맵의 상태와 상호작용은 <strong><code>MapInteractionViewModel</code></strong>을 통해 공통으로 관리되며, 각 맵의 특성에 맞는 뷰모델(<code>WorldMapViewModel</code>, <code>FieldMapViewModel</code>, <code>MiniMapViewModel</code>)이 이를 확장하여 사용합니다. 
@@ -604,40 +538,9 @@ void UMiniMapViewModel::OnUpdateQuestOrMissionStatus(uint32 NPCBaseID, const FNa
     // ... 퀘스트/미션 상태 업데이트 로직 ...
 }
 
-void UMiniMapViewModel::OnSetPlayerParty()
-{
-    // ... 파티 상태 업데이트 로직 ...
-}
-
-void UMiniMapViewModel::AddCommunityData(ECommunityType CommunityType, int64 CommunityKey)
-{
-    // ... 커뮤니티 데이터 추가 로직 ...
-}
-
-void UMiniMapViewModel::RemoveCommunityData(ECommunityType CommunityType, int64 CommunityKey)
-{
-    // ... 커뮤니티 데이터 제거 로직 ...
-}
-
-void UMiniMapViewModel::OnChangedCharacterWanted(const FOnAttributeChangeData& Data)
-{
-    // ... 수배 상태 업데이트 로직 ...
-}
-
-void UMiniMapViewModel::OnClickedMapRotationLock()
-{
-    // ... 맵 회전 잠금/해제 로직 ...
-}
-
 void UMiniMapViewModel::OnClickedMapExpand()
 {
     // ... 맵 확장/축소 로직 ...
-}
-
-// UW_MiniMapObjectIcon.cpp
-void UUW_MiniMapObjectIcon::Init(FVector2D IconScaleValue, float Angle, const FMiniMapObjectIconDetailData& DefaultIconDetailSetting)
-{
-    // ... 아이콘 초기화 로직 ...
 }
 
 void UUW_MiniMapObjectIcon::SetIcon(UObject* ResourceObject)
@@ -649,26 +552,11 @@ void UUW_MiniMapObjectIcon::UpdatePosition(const FVector2D& Position)
 {
     // ... 아이콘 위치 업데이트 로직 ...
 }
-
-void UUW_MiniMapObjectIcon::UpdateIcon()
-{
-    // ... 아이콘 시각적 업데이트 로직 ...
-}
-
-void UUW_MiniMapObjectIcon::ApplyIconDetail(const FMiniMapObjectIconDetailData& IconDetail)
-{
-    // ... 아이콘 세부 정보 적용 로직 ...
-}
-
-void UUW_MiniMapObjectIcon::Clear()
-{
-    // ... 아이콘 상태 초기화 로직 ...
-}
                         </code></pre>
                     </div>
 
                     <div class="mb-5">
-                        <h4>5. 통합된 입력 처리 시스템 (Unified Input Handling)</h4>
+                        <h4>3. 통합된 입력 처리 시스템 (Unified Input Handling)</h4>
                         <p>
                             <code>UUW_FieldMapInputHandlingWidget</code>는 <code>UInputHandlingWidget</code>을 상속받아 필드맵에 특화된 입력 처리를 담당하는 UMG 위젯입니다. 
                             이 위젯은 사용자의 마우스 드래그(<code>HandleInputMoved_Implementation()</code>)나 휠 이벤트(<code>HandleInputGestureOrWheelEvent_Implementation()</code>)를 감지하여 <code>UFieldMapViewModel</code>의 <code>DragMap()</code>, <code>ZoomByDelta()</code>, <code>ZoomToValue()</code> 함수를 호출함으로써 맵의 이동 및 확대/축소를 제어합니다. 
@@ -709,54 +597,6 @@ void UUW_FieldMapInputHandlingWidget::RestoreMapIconScale(FVector2D ScaleValue)
 }
                         </code></pre>
                     </div>
-
-                    <div class="mb-5">
-                        <h4>6. 월드맵 시스템 (World Map System)</h4>
-                        <p>
-                            <code>UWorldMapViewModel</code>은 게임의 전체 월드맵 데이터를 관리하고, 플레이어에게 월드맵 관련 정보를 제공하며 상호작용을 처리합니다. 
-                            <code>SetToWorldMapPlayerCenterLocation()</code> 함수를 통해 현재 플레이어의 위치를 기준으로 월드맵을 중앙에 배치하여 편리한 탐색을 돕습니다. 
-                            또한, <code>OnUpdateActivityFieldIconRedDot()</code> 및 <code>OnRetrievedOngoingInvasionPosIDSet()</code> 함수를 통해 실시간으로 진행 중인 침공 활동을 월드맵에 표시하여 플레이어가 중요한 이벤트에 참여할 수 있도록 안내합니다. 
-                            <code>OnConstructedWorldMapWidget()</code> 및 <code>OnDestructWorldMapWidget()</code> 함수는 월드맵 위젯의 생명 주기를 관리하며, 
-                            <code>OnClickReturnItem()</code> 및 <code>UseReturnMapItem()</code> 함수는 특정 아이템을 사용하여 플레이어가 월드맵 내에서 빠르게 이동할 수 있는 기능을 제공합니다.
-                        </p>
-                        <pre><code class="language-cpp">
-// WorldMapViewModel.cpp
-void UWorldMapViewModel::SetToWorldMapPlayerCenterLocation()
-{
-    // ... 플레이어 위치로 월드맵 중앙 이동 로직 ...
-}
-
-void UWorldMapViewModel::OnUpdateActivityFieldIconRedDot(const int32 OngoingInvasionPosID, const bool IsActive)
-{
-    // ... 침공 활동 아이콘 업데이트 로직 ...
-}
-
-void UWorldMapViewModel::OnRetrievedOngoingInvasionPosIDSet(const TSet<int32>& OngoingInvasionPosIDSet)
-{
-    // ... 진행 중인 침공 ID 세트 검색 로직 ...
-}
-
-void UWorldMapViewModel::OnConstructedWorldMapWidget(const float InDisplayNameZoomValue, const int32 InReturnItemID)
-{
-    // ... 월드맵 위젯 생성 시 초기화 로직 ...
-}
-
-void UWorldMapViewModel::OnDestructWorldMapWidget()
-{
-    // ... 월드맵 위젯 소멸 시 정리 로직 ...
-}
-
-void UWorldMapViewModel::OnClickReturnItem()
-{
-    // ... 귀환 아이템 사용 로직 ...
-}
-
-void UWorldMapViewModel::UseReturnMapItem()
-{
-    // ... 귀환 아이템 실제 사용 로직 ...
-}
-                        </code></pre>
-                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -764,7 +604,7 @@ void UWorldMapViewModel::UseReturnMapItem()
             <!-- Optimization -->
             <section class="resume-section" id="optimization">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">최적화</h2>
+                    <h2 class="mb-5">게임 안정성 및 최적화 기여</h2>
                     <h3 class="mb-4">미니맵 최적화</h3>
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -796,18 +636,6 @@ void UWorldMapViewModel::UseReturnMapItem()
             <section class="resume-section" id="problem-solving">
                 <div class="resume-section-content">
                     <h2 class="mb-5">문제해결</h2>
-                    <h3 class="mb-4">전투 프로세스 구조 개선</h3>
-                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 여러 조건 분기(if/else)가 중첩된 복잡한 구조로 인해 새로운 기능을 추가하거나 수정할 때 전투 로직이 꼬이는 문제가 자주 발생했습니다.</p>
-                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 상태 머신(State Machine) 패턴을 도입하여 전투 프로세스를 명확한 상태(대기, 공격, 피격 등)로 나누고, 각 상태의 진입/진출 조건을 명확히 정의하여 재편했습니다. 이를 통해 각 상태는 자신의 로직에만 집중할 수 있게 되어 코드의 복잡도가 크게 낮아졌습니다.</p>
-                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 버그가 감소하고 코드의 가독성과 유지보수성이 향상되었습니다.</p>
-                    <hr class="my-5">
-
-                    <h3 class="mb-4">자동 전투 시스템 개발</h3>
-                    <p><strong><i class="fas fa-exclamation-triangle text-warning"></i> 문제점:</strong> 반복적인 수동 조작으로 인한 사용자의 피로도가 높았습니다.</p>
-                    <p><strong><i class="fas fa-wrench text-primary"></i> 해결:</strong> 사용자의 개입을 최소화하는 자동 전투 로직을 직접 설계하고 구현했습니다.</p>
-                    <p><strong><i class="fas fa-check-circle text-success"></i> 결과:</strong> 사용자 편의성과 게임 몰입도가 크게 향상되었습니다.</p>
-                    <hr class="my-5">
-
                     <h3 class="mb-4">AI를 활용한 반복 작업 자동화</h3>
                     <p>서버 패킷 연결, 테이블 구조 생성 등 반복적인 작업을 AI 스크립트 자동 생성 도구를 통해 자동화했습니다. 이를 통해 개발 시간을 50% 단축하고, 수작업으로 인한 오류 발생률을 크게 줄였습니다.</p>
                 </div>
