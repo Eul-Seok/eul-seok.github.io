@@ -75,8 +75,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #bd5d38;
-  --bs-link-hover-color: #974a2d;
+  --bs-link-color: rgb(25, 13, 196);
+  --bs-link-hover-color: #c608f5;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -11045,8 +11045,12 @@ section.resume-section .resume-section-content {
 .publication-card a {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #007bff;
+  color: var(--bs-link-color);
   text-decoration: underline;
+}
+
+.publication-card a:hover {
+  color: var(--bs-link-hover-color);
 }
 
 .card-hover {
