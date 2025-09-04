@@ -152,7 +152,9 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">전투 시스템 설계 및 개선</h2>
                     <p class="lead mb-4">
-                        프로젝트 R의 전투 시스템은 <strong>상태 머신(State Machine)</strong>을 기반으로 설계되어, 복잡한 전투 상황에서도 명확하고 안정적으로 동작합니다. 플레이어의 조작, 자동 전투, 스킬 사용 등 다양한 요소를 유기적으로 결합해 역동적인 전투 경험을 제공합니다.
+                        프로젝트 R의 전투 시스템은 복잡한 상황에서도 안정적으로 동작할 수 있도록 <strong>상태 머신(State Machine) 패턴</strong>을 기반으로 설계되었습니다.
+                        플레이어의 직접 조작, 자동 전투, 스킬 사용 등 다양한 요소가 유기적으로 결합되어 전략성과 몰입감을 동시에 갖춘 역동적인 전투 경험을 제공합니다.<br>
+                        특히 전투 흐름을 명확하게 분리하고 예외 상황을 안정적으로 처리할 수 있도록 <strong>상태 전이 구조를 설계</strong>했으며, 자동 전투 로직(<code>UAutoCombatProcessor</code>)과 스킬 컴포넌트(<code>UAutoSkillComponent</code>)는 <strong>기능 간 결합도를 낮추고 독립적으로 동작할 수 있도록 모듈화</strong>하여 다양한 콘텐츠에 유연하게 적용 가능한 구조로 구현했습니다.
                     </p>
                     <hr class="my-5">
 
@@ -345,7 +347,8 @@ void UScanModel::ExecuteScan(const FScanRequest&amp; Request)
                 <div class="resume-section-content">
                     <h2 class="mb-5">개발 효율성 및 아키텍처 개선</h2>
                     <p class="lead mb-4">
-                        유지보수성과 확장성을 고려한 아키텍처를 설계하고, 반복적인 작업을 자동화하여 팀 전체의 개발 효율성을 높이는 데 기여했습니다.
+                        프로젝트 전반에서 <strong>유지보수성과 확장성을 고려한 아키텍처 설계</strong>를 주도하며, 반복적인 작업을 자동화하고 시스템을 모듈화함으로써 <strong>팀 전체의 개발 효율성 향상</strong>에 기여했습니다.<br>
+                        특히 콘텐츠 스케줄 시스템, 전투 처리 로직, UI 바인딩 구조 등 다양한 영역에서 <strong>재사용 가능한 컴포넌트와 유연한 데이터 구조</strong>를 설계하여 새로운 기능 추가나 변경이 발생하더라도 <strong>최소한의 수정으로 대응 가능한 구조</strong>를 구축했습니다.<br>
                     </p>
                     
                     <hr class="my-5">
@@ -452,7 +455,8 @@ void UHUDViewModel::SetPlayerHP(float NewHP)
                 <div class="resume-section-content">
                     <h2 class="mb-5">게임 안정성 및 최적화 기여</h2>
                     <p class="lead mb-4">
-                        지속적인 프로파일링과 코드 개선을 통해 안정적인 게임 플레이 환경을 제공하고, 부하가 많이 발생하는 시스템의 성능을 최적화했습니다.
+                        저는 프로젝트 전반에서 <strong>지속적인 프로파일링과 코드 개선</strong>을 통해 <strong>안정적인 게임 플레이 환경을 제공</strong>하고, <strong>부하가 집중되는 시스템의 성능을 정밀하게 최적화</strong>하는 데 집중했습니다.<br>
+                        특히 Unreal Insights와 같은 전문 프로파일링 툴을 활용하여 <strong>프레임 드랍, 메모리 누수, 댕글링 포인터 등</strong> 실전에서 발생하기 쉬운 문제들을 정확하게 분석하고 해결했으며, 반복적인 연산 제거와 오브젝트 풀링을 통해 <strong>리소스 사용 효율을 극대화</strong>했습니다.
                     </p>
                     <hr class="my-5">
 
@@ -581,7 +585,7 @@ void UMiniMapViewModel::OnUpdateLocationUIDList(const FMiniMapUpdateLocationUIDL
                 <div class="resume-section-content">
                     <h2 class="mb-5">다양한 콘텐츠 시스템 구현</h2>
                     <p class="lead mb-4">
-                        MMORPG의 핵심 재미를 구성하는 전투 외 콘텐츠 시스템을 다수 개발하여 게임의 깊이와 지속성을 강화했습니다. 단순한 기능 구현을 넘어, 모듈화된 구조와 데이터 기반 설계를 통해 확장성과 유지보수성을 고려한 콘텐츠 프레임워크를 구축했습니다.
+                        MMORPG의 핵심 재미를 구성하는 전투 외 콘텐츠 시스템을 다수 개발하여 게임의 깊이와 지속성을 강화했습니다. 단순한 기능 구현을 넘어, 모듈화된 구조와 데이터 기반 설계를 통해 <strong>확장성과 유지보수성</strong>을 고려한 콘텐츠 프레임워크를 구축했습니다.
                     </p>
                     <hr class="my-5">
 
