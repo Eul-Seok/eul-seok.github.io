@@ -11061,3 +11061,5 @@ section.resume-section .resume-section-content {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
+
+.text-navy-bold { color:darkblue; font-weight: bold; }
