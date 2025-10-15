@@ -80,7 +80,7 @@
                     <p class="mt-4">
                         본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크 스타일의 대규모 MMORPG</strong>로, C++과 Unreal Engine 5를 활용해 제작되었습니다.
                         저는 2023년 9월부터 클라이언트 개발팀의 팀원으로 합류했으며, 2년간 <strong>전투 시스템, UI/UX, 시스템 아키텍처 설계 및 최적화</strong> 등 게임의 핵심적인 부분들을 담당하였습니다.<br><br>
-                        <strong>World Partition, Gameplay Ability System(GAS)</strong> 등 언리얼 엔진 5의 최신 기술들이 활용되었으며, UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입하여 코드의 재사용성과 유지보수성을 높였습니다.
+                        <strong>World Partition, Gameplay Ability System(GAS), 비동기 로딩</strong> 등 언리얼 엔진 5의 최신 기술들이 활용되었으며, UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입하여 코드의 재사용성과 유지보수성을 높였습니다.
                         현재 출시 미정인 비공개 프로젝트라 주요 내용은 텍스트 중심으로 구성했습니다.
                     </p>
                 </div>
@@ -407,7 +407,7 @@ void UHUDViewModel::SetPlayerHP(float NewHP)
     UE_MVVM_SET_PROPERTY_VALUE(PlayerHP, NewHP);
 }</code></pre>
                     <p>
-                        이 코드는 <strong>데이터 변경 로직과 UI 업데이트를 명확히 분리</strong>하여, MVVM 아키텍처의 핵심 장점을 보여줍니다.<br>
+                        이 코드는 <strong>데이터 변경 로직과 UI 업데이트를 명확히 분리</strong>하여, MVVM 아키텍처의 간략한 구조를 보여줍니다.<br>
                         ViewModel은 단순히 데이터 상태를 관리하며, View는 바인딩된 값만을 표시하므로 <strong>결합도가 낮고 테스트가 용이한 구조</strong>를 제공합니다.
                     </p>
                     
@@ -423,14 +423,14 @@ void UHUDViewModel::SetPlayerHP(float NewHP)
                     <h3 class="mb-4">순환형 퀵슬롯 (Looping Quick Slot)</h3>
                     <p>
                         한정된 화면 공간에 많은 스킬을 배치하기 위해, <strong>기존의 ScrollBox 대신 ListView 위젯을 커스터마이징하여</strong> 좌우로 무한히 순환하는 퀵슬롯 UI를 구현했습니다.
-                        ScrollBox는 단순한 스크롤 영역만 제공하는 반면, ListView는 <strong>아이템 재사용(Virtualization)과 렌더링 최적화</strong> 기능을 기본적으로 갖추고 있어, 성능과 확장성 측면에서 더 적합하다고 판단했습니다.
+                        ScrollBox는 단순한 스크롤 영역만 제공하는 반면, ListView는 <strong>아이템 재사용과 렌더링 최적화</strong> 기능을 기본적으로 갖추고 있어, 성능과 확장성 측면에서 더 적합하다고 판단했습니다.
                         리스트의 양 끝에 아이템을 동적으로 복제하고, 스크롤 오프셋을 조정하는 방식으로 사용자에게 <strong>끊김 없는 순환 스크롤 경험</strong>을 제공합니다.
                     </p>
                     <p class="mb-2">
                         <strong class="text-navy-bold">개발 과정에서 중요하게 생각한 점</strong>
                         <ul>
                             <li><strong>사용자 경험과 성능의 균형:</strong> 단순한 반복 스크롤이 아닌, 자연스럽고 끊김 없는 순환 경험을 제공하기 위해 스크롤 오프셋 조절과 아이템 복제 전략을 병행했습니다. 이 과정에서 성능 병목을 방지하기 위해 UI 요소의 생명주기 관리와 최소 갱신 전략을 적용했습니다.</li>
-                            <li><strong>UI 최적화 전략:</strong> ListView의 기본적인 가상화 렌더링 구조를 활용하면서, 순환 구조 특유의 착시 효과를 구현하기 위해 커스터마이징을 진행했습니다. 특히 모바일 환경에서의 프레임 드랍을 방지하기 위해 불필요한 UI 생성 최소화에 집중했습니다.</li>
+                            <li><strong>UI 최적화 전략:</strong> ListView의 기본적인 아이템 재사용과 렌더링 최적화 기능을 활용하면서, 순환 구조 특유의 착시 효과를 구현하기 위해 커스터마이징을 진행했습니다. 특히 모바일 환경에서의 프레임 드랍을 방지하기 위해 불필요한 UI 생성 최소화에 집중했습니다.</li>
                             <li><strong>확장성과 유지보수성:</strong> 순환 구조는 단순한 스킬 UI에만 국한되지 않고, 아이템 인벤토리, 퀘스트 목록 등 다양한 UI에 재사용 가능하도록 컴포넌트화하여 유지보수성과 확장성을 확보했습니다.</li>
                         </ul>
                     </p>
@@ -602,9 +602,8 @@ void UMiniMapViewModel::OnUpdateLocationUIDList(const FMiniMapUpdateLocationUIDL
 
                     <hr class="my-5">
                     <h3 class="mb-4">통합 맵 시스템</h3>
-                    <div class="subheading mb-1">기능 개요</div>
                     <p class="mb-1">MMORPG 환경에서 플레이어의 위치 파악과 콘텐츠 접근성을 높이기 위해, 월드맵, 필드맵, 미니맵 세 종류의 맵 UI를 통합적으로 설계하고 구현했습니다.<br>
-                        각 맵은 고유한 역할을 가지며, 공통 상호작용(이동, 확대/축소, 마우스 커서 기반 중심 이동 등)은 <code>UMapInteractionViewModel</code>을 통해 일관되게 처리됩니다.</p>
+                        각 맵 UI는 고유한 역할을 가지며, 공통 상호작용(이동, 확대/축소, 마우스 커서 기반 중심 이동 등)은 <code>UMapInteractionViewModel</code>을 통해 일관되게 처리됩니다.</p>
                     <ul>
                         <li><strong>월드맵:</strong> 전체 지역 구조와 필드맵 바로가기 기능 지원</li>
                         <li><strong>필드맵:</strong> 현재 지역 내 주요 지형과 NPC 위치를 표시, 자동 이동 및 즉시 이동 기능 지원</li>
@@ -614,13 +613,13 @@ void UMiniMapViewModel::OnUpdateLocationUIDList(const FMiniMapUpdateLocationUIDL
                     <p class="mb-2">
                         <strong class="text-navy-bold">개발 과정에서 중요하게 생각한 점</strong>
                         <ul>
-                            <li><strong>공통 기능 분리를 통한 재사용성 확보:</strong> 이동, 확대/축소 등 모든 맵에서 공통적으로 사용되는 기능을 <code>UMapInteractionViewModel</code>에 통합하여, 중복 코드를 제거하고 유지보수성을 높였습니다. 각 맵은 이 클래스를 개별 인스턴스로 소유하여 독립적으로 활용하면서도, 필요 시 자신만의 특화된 로직을 추가할 수 있어 유연하고 확장 가능한 아키텍처를 구축했습니다.</li>
+                            <li><strong>공통 기능 분리를 통한 재사용성:</strong> 이동, 확대/축소 등 모든 맵에서 공통적으로 사용되는 기능을 <code>UMapInteractionViewModel</code>에 통합하여, 중복 코드를 제거하고 유지보수성을 높였습니다. 각 맵은 이 클래스를 개별 인스턴스로 소유하여 독립적으로 활용하면서도, 필요 시 자신만의 특화된 로직을 추가할 수 있어 유연하고 확장 가능한 아키텍처를 구축했습니다.</li>
                             <li><strong>맵 간 일관성 유지:</strong> 동일한 상호작용 방식과 UI 흐름을 유지함으로써, 플레이어가 맵 종류에 관계없이 일관된 조작 경험을 느낄 수 있도록 설계했습니다.</li>
                         </ul>
                     </p>
                     <p class="mt-4">
                         아래 다이어그램은 각 맵 뷰모델이 공통 상호작용 로직을 담당하는 <code>UMapInteractionViewModel</code> 인스턴스를 개별적으로 소유하여 활용하는 구조를 보여줍니다.
-                        이를 통해 각 맵은 독립적으로 상호작용 기능을 사용하면서도, 필요에 따라 자신만의 특화된 로직을 추가할 수 있어 유연하고 확장 가능한 아키텍처를 제공합니다.
+                        이를 통해 각 맵은 독립적으로 상호작용 기능을 사용하면서도, 필요에 따라 해당 콘텐츠에 특화된 로직을 추가할 수 있어 유연하고 확장 가능한 아키텍처를 제공합니다.
                     </p>
                     <div class="text-center my-3">
                         <figure class="figure w-75">
@@ -658,7 +657,6 @@ void UMiniMapViewModel::OnUpdateLocationUIDList(const FMiniMapUpdateLocationUIDL
 
                     <hr class="my-5">
                     <h3 class="mb-4">유연하고 확장 가능한 데이터 기반 시스템 설계</h3>
-                    <div class="subheading mb-1">설계 목적</div>
                     <p>
                        MMORPG의 복잡한 콘텐츠를 효율적으로 관리하고, 기획 변경이나 신규 기능 추가에 빠르게 대응할 수 있도록 <strong>데이터 기반의 모듈식 시스템</strong>을 설계했습니다.
                        각 기능(업적, 레이드, 스케줄 등)은 <strong>독립적인 데이터 모델</strong>로 분리되며, 모든 로직은 <strong>데이터 테이블에 의해 제어</strong>되도록 아키텍처를 구성했습니다.
@@ -823,24 +821,24 @@ void UBattleArenaPlaySystem::ProcessArenaEvent(const FArenaEvent&amp; EventData)
                 <div class="resume-section-content">
                     <h2 class="mb-5">성장</h2>
                     <h3 class="mb-4">Unreal Engine 5 기반 대규모 프로젝트 경험</h3>
-                    <p>MMORPG 환경에서 실시간 렌더링, 크로스플랫폼 대응(PC/모바일) 등 고난도의 기술 과제를 해결하며 Unreal Engine 5에 대한 깊은 이해와 실전 적용 능력을 갖추게 되었습니다.</p>
+                    <p>대규모 MMORPG와 크로스플랫폼 대응(PC/모바일) 개발 환경에서 Unreal Engine 5에 대한 깊은 이해와 실전 적용 능력을 갖추게 되었으며, 복잡한 시스템을 직접 설계하고 구현하는 과정에서 언리얼의 내부 구조와 최적화 기법을 심도 있게 익혔습니다.</p>
                      <ul>
-                        <li>MVVM 아키텍처를 활용한 UI/로직 분리 및 유지보수성 향상</li>
-                        <li>오브젝트 풀링을 통한 메모리 효율화 및 성능 안정화</li>
-                        <li>이벤트 기반 시스템을 활용한 콘텐츠 흐름 제어 및 확장성 확보</li>
+                        <li><strong>MVVM 아키텍처 기반 UI 설계 역량:</strong> UI와 로직의 분리를 통해 유지보수성과 확장성을 높이는 구조적 설계 능력
+                        <li><strong>메모리 및 성능 최적화 기술:</strong> 오브젝트 풀링 기법을 활용한 리소스 효율화뿐만 아니라, 댕글링 포인터 및 순환 참조로 인한 메모리 누수 문제를 사전에 방지하고 해결한 경험을 통해 안정적인 런타임 환경을 구현</li>
+                        <li><strong>이벤트 기반 콘텐츠 설계 능력:</strong> 유연한 콘텐츠 흐름 제어 및 확장 가능한 시스템 구축 역량</li>
+                        <li><strong>크로스플랫폼 개발 경험:</strong> PC와 모바일 환경 모두에서 안정적인 실행을 위한 플랫폼별 대응 전략 수립 및 구현 능력</li>
                     </ul>
-                    <p>복잡한 시스템을 직접 설계하고 구현하는 과정에서 언리얼의 내부 구조와 최적화 기법을 심도 있게 익혔습니다.</p>
                     
                     <hr class="my-5">
                     <h3 class="mb-4">협업을 통한 시스템 설계 및 개선 역량 강화</h3>
                     <p>
-                        복잡한 콘텐츠 시스템을 설계하고 개선하는 과정에서 기획자, 클라이언트 개발자, 서버 개발자와 긴밀하게 협력하며 요구사항을 분석하고 기술적 제약을 조율해 실현 가능한 구조로 구체화했습니다.<br>
-                        예를 들어, 레이드 시스템과 보스 스케줄 기능을 설계할 때는 전투 흐름과 콘텐츠 활성 타이밍을 서버와 동기화하는 구조를 제안하고, 자동 전투 로직과 스킬 처리 컴포넌트를 모듈화하여 각 팀원이 독립적으로 개발 및 테스트할 수 있는 기반을 마련했습니다.
-                        이러한 경험을 통해 단순한 기능 구현을 넘어서, 팀 전체의 개발 생산성과 시스템 완성도를 높이는 데 실질적인 기여를 할 수 있었습니다.
+                        복잡한 콘텐츠 시스템을 설계하고 개선하는 과정에서, 자동 전투 로직과 스킬 처리 컴포넌트를 모듈화하여 팀원들이 독립적으로 개발하고 테스트할 수 있는 기반을 마련했으며, 기획자 및 서버 개발자와 정확한 요구 사항을 원활히 공유할 수 있는 협업 환경을 구축하고, 기술적 제약을 고려한 실현 가능한 구조를 주도적으로 제안하였습니다.<br>
+                        예를 들어, 레이드 시스템과 보스 스케줄 기능을 설계할 때는 전투 흐름과 콘텐츠 활성 타이밍을 서버와 정밀하게 동기화할 수 있는 구조를 제안했으며, 이러한 경험을 통해 단순한 기능 구현을 넘어 팀 전체의 개발 생산성과 시스템 완성도를 높이는 데 실질적인 기여를 할 수 있었습니다.
+
                     </p>
                     <ul>
                         <li><code>UAttackProcessor</code>에 상태 머신 패턴을 도입하여 전투 흐름을 명확하게 구조화</li>
-                        <li><code>UAutoCombatProcessor</code>, <code>UAutoSkillComponent</code>에 지능형 로직을 구현하여 자동 전투 시스템의 전략성과 확장성을 강화</li>
+                        <li><code>UAutoCombatProcessor</code>, <code>UAutoSkillComponent</code>를 구현하여 자동 전투 시스템의 전략성과 확장성을 강화</li>
                         <li>모듈화된 구조를 통해 재사용성과 유지보수성을 높이며 팀 전체의 개발 생산성 향상에 기여</li>
                     </ul>
 
