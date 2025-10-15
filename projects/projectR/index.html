@@ -71,17 +71,16 @@
                                 <p class="mb-2"><strong>Released:</strong> 미정</p>
                                 <p class="mb-2"><strong>Developer:</strong> BluePotion Games</p>
                                 <p class="mb-2"><strong>Platforms:</strong> PC, Android</p>
-                                <p class="mb-2"><strong>Skill focus:</strong> 전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처, 최적화</p>
+                                <p class="mb-2"><strong>Skill focus:</strong> 전투 시스템, 콘텐츠 구현, UI/UX, 아키텍처 설계, 최적화</p>
                                 <p class="mb-2"><strong>Time spent on project:</strong> 2023.09 ~ 2025.09</p>
                                 <p class="mb-0"><strong>Language & Engine:</strong> C++, Unreal Engine 5</p>
                             </div>
                         </div>
                     </div>
                     <p class="mt-4">
-                        본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크(Lineage-like) 스타일 대규모 MMORPG</strong>로, C++과 Unreal Engine 5를 활용해 높은 그래픽 품질과 최적의 성능 구현을 목표로 합니다.
-                        2023년 9월부터 클라이언트 개발팀의 팀원으로 합류하여, <strong>전투 시스템, UI/UX, 시스템 아키텍처 설계 및 최적화</strong> 등 게임의 핵심적인 부분들을 담당하고 있습니다.
-                        <br><br>
-                        <strong>World Partition, Nanite, Gameplay Ability System(GAS)</strong> 등 언리얼 엔진 5의 최신 기술을 적극적으로 활용하고 있으며, UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입하여 코드의 재사용성과 유지보수성을 높였습니다.
+                        본 프로젝트는 <strong>크로스플랫폼(PC 및 모바일)</strong> 기반의 <strong>리니지 라이크 스타일의 대규모 MMORPG</strong>로, C++과 Unreal Engine 5를 활용해 제작되었습니다.
+                        저는 2023년 9월부터 클라이언트 개발팀의 팀원으로 합류했으며, 2년간 <strong>전투 시스템, UI/UX, 시스템 아키텍처 설계 및 최적화</strong> 등 게임의 핵심적인 부분들을 담당하였습니다.<br><br>
+                        <strong>World Partition, Gameplay Ability System(GAS)</strong> 등 언리얼 엔진 5의 최신 기술들이 활용되었으며, UI 개발에는 <strong>MVVM(Model-View-ViewModel) 아키텍처</strong>를 도입하여 코드의 재사용성과 유지보수성을 높였습니다.
                         현재 출시 미정인 비공개 프로젝트라 주요 내용은 텍스트 중심으로 구성했습니다.
                     </p>
                 </div>
@@ -93,7 +92,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">나의 주요 기여</h2>
                     <p class="lead mb-5">
-                        프로젝트 R 개발에 주도적으로 참여하여 다음과 같은 핵심 기여를 통해 게임의 완성도와 효율성을 높였습니다.
+                        저는 프로젝트 R 개발과정에서 다음과 같은 기여를 통해 게임의 완성도와 개발 효율성을 높였습니다.
                     </p>
                     <div class="accordion" id="experienceAccordion">
                         <div class="accordion-item">
@@ -161,17 +160,14 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">전투 시스템 설계 및 개선</h2>
                     <p class="lead">
-                        프로젝트 R의 전투 시스템은 복잡한 상황에서도 안정적으로 동작할 수 있도록 <strong>상태 머신(State Machine) 패턴</strong>을 기반으로 설계되었습니다.
-                        플레이어의 직접 조작, 자동 전투, 스킬 사용 등 다양한 요소가 유기적으로 결합되어 전략성과 몰입감을 동시에 갖춘 역동적인 전투 경험을 제공합니다.<br>
-                    </p>
-                    <p class="lead">
-                        특히 전투 흐름을 명확하게 분리하고 예외 상황을 안정적으로 처리할 수 있도록 <strong>상태 전이 구조를 설계</strong>했으며, 자동 전투 로직(<code>UAutoCombatProcessor</code>)과 스킬 컴포넌트(<code>UAutoSkillComponent</code>)는 <strong>기능 간 결합도를 낮추고 독립적으로 동작할 수 있도록 모듈화</strong>하여 다양한 콘텐츠에 유연하게 적용 가능한 구조로 구현했습니다.
+                        프로젝트 R의 전투 시스템은 복잡한 상황에서도 전투 흐름을 명확하게 분리하고 예외 상황을 안정적으로 처리할 수 있도록 <strong>상태 머신(State Machine) 패턴</strong>을 기반으로 설계하였습니다.<br>
+                        또한, 자동 전투 로직(<code>UAutoCombatProcessor</code>)과 스킬 컴포넌트(<code>UAutoSkillComponent</code>)는 <strong>기능 간 결합도를 낮추고 독립적으로 동작할 수 있도록 모듈화</strong>하여 다양한 콘텐츠에 유연하게 적용 가능한 구조로 구현했습니다.
                     </p>
                     <hr class="my-5">
 
                     <h3 class="mb-4">전투 프로세스 구조 개선</h3>
                     <p><strong class="text-navy-bold">문제점:</strong> 기존 전투 로직은 여러 조건 분기(if/else)가 중첩된 구조로 인해, 기능 추가나 수정 시 로직이 꼬이는 문제가 자주 발생했습니다. 특히 상태 간 책임이 불분명하여 디버깅과 유지보수가 어려웠습니다.</p>
-                    <p><strong class="text-navy-bold">해결:</strong> 상태 머신(State Machine) 패턴을 도입해 전투 프로세스를 `추적`, `회전`, `공격 대기`, `공격 가능` 등 명확한 상태로 분리하고, 각 상태의 전환 조건을 엄격히 정의했습니다. 이를 통해 각 상태는 자신의 책임에만 집중할 수 있게 되었고, 로직의 복잡도는 크게 낮아졌습니다.</p>
+                    <p><strong class="text-navy-bold">해결:</strong> 상태 머신 패턴을 도입해 전투 프로세스를 `추적`, `회전`, `공격 대기`, `공격 가능` 등 명확한 상태로 분리하고, 각 상태의 전환 조건을 명확하게 정의했습니다. 이를 통해 각 상태는 자신의 책임에만 집중할 수 있게 되었고, 로직의 복잡도는 크게 낮아졌습니다.</p>
                     <p><strong class="text-navy-bold">성과:</strong> 버그 발생률이 감소하고 코드의 가독성과 유지보수성이 향상되어, 새로운 전투 기능을 안정적으로 추가할 수 있는 기반을 마련했습니다.</p>
                     <p class="mb-2">
                         <strong class="text-navy-bold">개발 과정에서 중요하게 생각한 점</strong>
@@ -199,7 +195,7 @@ void UAttackProcessor::SetAttackState(EAttackState NewState)
     }
 
     // 상태 변경을 Delegate로 Broadcast하여,
-    // 이벤트를 구독하는 다른 객체(플레이어 컨트롤러, UI 등)에 전파합니다.
+    // 이벤트를 구독하는 다른 객체(플레이어 컨트롤러, UI 등)에 통지합니다.
     if(OnAttackStateChanged.IsBound())
     {
         OnAttackStateChanged.Broadcast(PrevState, CurrentState);
@@ -207,7 +203,7 @@ void UAttackProcessor::SetAttackState(EAttackState NewState)
 }
 </code></pre>
                     <p>
-                        이 구조는 상태 변경 시 관련 로직만 실행되며, 델리게이트를 통해 UI나 컨트롤러 등 다른 시스템에 상태 변화를 전파함으로써 결합도를 낮추고 확장성을 높였습니다.
+                        이 구조는 상태 변경 시 관련 로직만 실행되며, 델리게이트를 통해 UI나 컨트롤러 등 다른 시스템에 상태 변화를 통지함으로써 결합도를 낮추고 확장성을 높였습니다.
                     </p>
                     
                     <hr class="my-5">
